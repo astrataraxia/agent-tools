@@ -5,8 +5,8 @@ set -l msg_file $argv[1]
 # read fist line in commit msg
 set -l commit_title (head -n 1 $msg_file)
 
-# star 'codex' or 'codex:'  check
-if string match -ri '^codex' $commit_title
+# star 'agent' or 'agent:'  check
+if string match -ri '^agent' $commit_title
     echo "🤖 [Codex Commit Detected] start verify scripts"
     
     ~/agent-tools/hooks/verify.fish
